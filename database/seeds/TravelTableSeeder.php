@@ -19,6 +19,7 @@ class TravelTableSeeder extends Seeder
             $newTravel->how_many_poeple = $faker->numberBetween(1,5);
             $newTravel->end_validity = $faker->dateTimeThisYear('+15 years');
             $newTravel->description = $faker->paragraph(3);
+            $newTravel->img_url = $faker->imageUrl(600, 600);
             $newTravel->slug = Str::slug($newTravel->name, '-');
 
             $newTravel->save();
